@@ -1,0 +1,62 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24-ago-2019, 19:45:35
+    Author     : Xavier
+*/
+
+@charset "UTF-8";
+
+/ * untitled-font-1 * /
+@Perfil delantero {
+  font-family: "untitled-font-1";
+  src: url ("https://file.myfontastic.com/KUSjhGwyNQvSXLXxGjhcHh/fonts/1538151395.eot");
+  src: url ("https://file.myfontastic.com/KUSjhGwyNQvSXLXxGjhcHh/fonts/1538151395.eot?#iefix") formato ("embedded-opentype"),
+    formato url ("https://file.myfontastic.com/KUSjhGwyNQvSXLXxGjhcHh/fonts/1538151395.woff") ("woff"),
+    formato url ("https://file.myfontastic.com/KUSjhGwyNQvSXLXxGjhcHh/fonts/1538151395.ttf") ("truetype"),
+    formato url ("https://file.myfontastic.com/KUSjhGwyNQvSXLXxGjhcHh/fonts/1538151395.svg#1538151395") ("svg");
+  peso de fuente: normal;
+  estilo de fuente: normal;
+}
+
+[icono de datos]: antes de {
+  font-family: "untitled-font-1"! importante;
+  contenido: attr (icono de datos);
+  estilo de fuente: normal! importante;
+  font-weight: normal! importante;
+  variante de fuente: normal! importante;
+  transformación de texto: ¡ninguno! importante;
+  hablar: ninguno;
+  altura de línea: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: escala de grises;
+}
+
+[class ^ = "icon -"]: antes,
+[class * = "icon -"]: antes de {
+  font-family: "untitled-font-1"! importante;
+  estilo de fuente: normal! importante;
+  font-weight: normal! importante;
+  variante de fuente: normal! importante;
+  transformación de texto: ¡ninguno! importante;
+  hablar: ninguno;
+  altura de línea: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: escala de grises;
+}
+
+.icon-vimeo: antes de {
+  contenido: "\ 63";
+}
+.icon-menu: antes de {
+  contenido: "\ 65";
+}
+.icon-twitter: antes de {
+  contenido: "\ 61";
+}
+.icon-facebook: antes de {
+  contenido: "\ 62";
+}

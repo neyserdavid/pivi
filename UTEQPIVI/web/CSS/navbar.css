@@ -1,0 +1,484 @@
+﻿body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #333;
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #2B579A;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+a {
+  color: #2B2D42;
+  font-weight: 500;
+  -webkit-transition: 0.2s color;
+  transition: 0.2s color;
+}
+
+a:hover, a:focus {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/*NAvbarPrimario*/
+.NavBarTop{
+    display: flex;
+    height: 35px;
+    justify-content: space-around;
+    background: #1E1F29;
+    width: 100%;
+}
+.NombUser{
+
+    display: flex;
+    margin-top: -10px;
+}
+.CerrarSesionCont{
+
+    display: flex;
+    margin-top: -10px;
+}
+.iconoUse{
+    width: 25px;
+    height: 25px;
+    margin-top: 15px;
+}
+.iconoCerrarSesion{
+    width: 25px;
+    height: 25px;
+    margin-top: 15px;
+}
+.NavUserN{
+    color: #fff;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+.lblCerrarSesionCont{
+    color: #fff;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.imgnavbar{
+    width: 150px;
+    margin-top: 3px;
+}
+header{
+    position: absolute;
+    top: 35px;
+    left: 0;
+    padding: 0 100px;
+    background: #15161D;
+    width: 100%;
+    box-sizing: border-box;
+    height:70px;
+    display: flex;
+    justify-content: center;
+}
+header .logo{
+    color: #fff;
+    height: 70px;
+    line-height: 70px;
+    float: left;
+    float: left;
+    font-weight: bold;
+    width: 100px;
+} 
+header nav{
+    float: right;
+}
+header nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+}
+header nav ul li{
+    list-style: none;
+    position: relative;
+    
+}
+header nav ul li.sub-menu:before{
+    content: '\f0d7';
+    position: absolute;
+    font-family: fontAwesome;
+    position: absolute;
+    line-height: 70px;
+    color: #fff;
+    right: 5px;
+    margin-top: -10px;
+}
+header nav ul li.active.sub-menu:before{
+    content: '\f0d8';
+}
+header nav ul li ul{
+    position: absolute;
+    left: 0;
+    background: #333;
+    display: none;
+}
+header nav ul li.active ul{
+    display: block;
+}
+header nav ul li ul li{
+    display: block;
+    width: 200px;
+}
+header nav ul li a {
+    height: 70px;
+    line-height: 70px;
+    padding: 0 20px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+header nav ul li a:hover,
+header nav ul li a.active{
+    color: #fff;
+    background: #0C3A62;
+    border-style: none;
+    
+}
+.menu-toggle{
+    position: relative;
+    color: #fff;
+    float: right;
+    line-height: 70px;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    top: -60px;
+}
+
+fieldset{
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 0 0 0 10px;
+    width: 70%;
+    margin-left: 90px;
+    margin-right: 80px;
+    margin-top: 8px;
+    max-width: 700px;
+    height: 50px;
+}
+.txtBuscador, .btnBuscador{
+    position: relative;
+    float: left;
+    width: 650px;
+    height: 48px;
+    padding: 0;
+}
+.txtBuscador{
+    color: #333;
+    border: none;
+    float: left;
+    text-decoration: none;
+    font-size: 16px;
+    color: #757575;
+}
+.btnBuscador{
+   width: 50px;
+    border: none;
+    background: #2B579A;
+    float: right;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.fa-search{
+    color: #fff;
+}
+.txtBuscador:focus{
+    outline: none;
+}
+.txtBuscador:focus +.btnBuscador{
+    transform: translate(0.0);
+}
+@media (max-width:411px){
+    header{
+        padding: 0 20px;
+    }
+    .menu-toggle{
+        display: block;
+    }
+    header nav{
+       /* display: none;*/
+        position: absolute;
+        width: 100%;
+        height:calc(100vh -50px);
+        background: #333;
+        left: -100%;
+        top:70px;
+        transition: 0.5s;
+    }
+    header nav.active{
+        left: 0;
+    }
+    header nav ul{
+        display: block;
+        text-align: center;
+    }
+    header nav ul li a{
+        border-bottom: 1px solid rgb(0,0,0,.2);
+
+    }
+    header nav ul li.active ul{
+        position: relative;
+        background: #2B579A;
+        width: 100%;
+    }
+    header nav ul li ul li{
+        width: 100%;
+    }
+    .imgnavbar{
+    width: 100px;
+    margin-top:12px;
+    }
+
+}
+@media (max-width:1200px){
+    
+header{
+        padding: 0 20px;
+    }
+    .menu-toggle{
+        display: block;
+    }
+    header nav{
+       /* display: none;*/
+        position: absolute;
+        width: 100%;
+        height:calc(100vh -50px);
+        background: #333;
+        left: -100%;
+        top:70px;
+        transition: 0.5s;
+    }
+    header nav.active{
+        left: 0;
+    }
+    header nav ul{
+        display: block;
+        text-align: center;
+    }
+    header nav ul li a{
+        border-bottom: 1px solid rgb(0,0,0,.2);
+
+    }
+    header nav ul li.active ul{
+        position: relative;
+        background: #47484B;
+        width: 100%;
+    }
+    header nav ul li ul li{
+        width: 100%;
+    }
+    .imgnavbar{
+    width: 100px;
+    margin-top:12px;
+    }
+}
+
+@media(min-width:375px){
+   
+fieldset{
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 0 0 0 10px;
+    width: 180px;
+    margin-left: 9px;
+    margin-right: 18px;
+    margin-top: 8px;
+    max-width: 200px;
+    height: 50px;
+}
+
+.txtBuscador{
+    color: #333;
+    border: none;
+    float: left;
+    text-decoration: none;
+    font-size: 16px;
+    color: #757575;
+    width: 115px;
+
+} 
+        .menu-toggle{
+        display: block;
+            top: 1px;
+    }
+}
+
+@media(min-width:600px){
+   
+fieldset{
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 0 0 0 10px;
+    width: 300px;
+    margin-left: 9px;
+    margin-right: 18px;
+    margin-top: 8px;
+    max-width: 300px;
+    height: 50px;
+}
+
+.txtBuscador{
+    color: #333;
+    border: none;
+    float: left;
+    text-decoration: none;
+    font-size: 16px;
+    color: #757575;
+    width: 245px;
+
+} 
+        .menu-toggle{
+        display: block;
+            top: 1px;
+    }
+}
+
+@media(min-width:900px){
+   
+fieldset{
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 0 0 0 10px;
+    width: 500px;
+    margin-left: 9px;
+    margin-right: 18px;
+    margin-top: 8px;
+    max-width: 500px;
+    height: 50px;
+}
+
+.txtBuscador{
+    color: #333;
+    border: none;
+    float: left;
+    text-decoration: none;
+    font-size: 16px;
+    color: #757575;
+    width: 445px;
+
+} 
+        .menu-toggle{
+        display: block;
+            top: 1px;
+    }
+}
+@media(min-width:1100px){
+   
+fieldset{
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 0 0 0 10px;
+    width: 600px;
+    margin-left: 79px;
+    margin-right: 18px;
+    margin-top: 8px;
+    max-width: 600px;
+    height: 50px;
+}
+
+.txtBuscador{
+    color: #333;
+    border: none;
+    float: left;
+    text-decoration: none;
+    font-size: 16px;
+    color: #757575;
+    width: 475px;
+
+} 
+        .menu-toggle{
+        display: block;
+            top: 1px;
+    }
+    .menu-toggle{
+        display: none;
+    }
+    
+}
+
+@media(min-width:1200px){
+   
+fieldset{
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 0 0 0 10px;
+    width: 550px;
+    margin-left: 79px;
+    margin-right: 18px;
+    margin-top: 8px;
+    max-width: 550px;
+    height: 50px;
+}
+
+.txtBuscador{
+    color: #333;
+    border: none;
+    float: left;
+    text-decoration: none;
+    font-size: 16px;
+    color: #757575;
+    width: 415px;
+
+} 
+        .menu-toggle{
+        display: block;
+            top: 1px;
+    }
+    .menu-toggle{
+        display: none;
+    }
+    
+}
+@media(min-width:1300px){
+   
+fieldset{
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 0 0 0 10px;
+    width: 700px;
+    margin-left: 79px;
+    margin-right: 18px;
+    margin-top: 8px;
+    max-width: 700px;
+    height: 50px;
+}
+
+.txtBuscador{
+    color: #333;
+    border: none;
+    float: left;
+    text-decoration: none;
+    font-size: 16px;
+    color: #757575;
+    width: 535px;
+
+} 
+        .menu-toggle{
+        display: block;
+            top: 1px;
+    }
+    .menu-toggle{
+        display: none;
+    }
+    
+}

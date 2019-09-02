@@ -1,0 +1,510 @@
+﻿body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #333;
+}
+.lblContNomText{
+    width: 100%;
+    color:rgb(125, 127, 129);
+}
+
+.divcontNomText{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+
+.txtcontNomText{
+    width: 97%;
+    border-color: rgb(218, 218, 218);
+    border-style: solid;
+    border-width: 1px;
+    height: 45px;
+    color: rgb(125, 127, 129);
+    margin-bottom: 10px;
+    border-radius:0px;
+}
+.imgEm{
+    margin: auto;
+    height: 162px;
+}
+.divBtnEm{
+    display: flex;
+    width: 97%;
+   
+    text-align: center;
+    margin-top: 40px;
+}
+.btnGuardarEm{
+    border-style: none;
+    color: #fff;
+    background: rgb(209, 0, 36);
+    width: 310px;
+    border-radius: 10px;
+    height: 45px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-right: 30px;
+}
+.btnGuardarEm:hover{
+     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.09),0 17px 50px 0 rgba(0,0,0,0.01);
+}
+.btnCancelarEm{
+    border-style: none;
+    color: #fff;
+    background: rgb(153, 153, 153);
+    width: 310px;
+    border-radius: 10px;
+    height: 45px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.btnCancelarEm:hover{
+     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.09),0 17px 50px 0 rgba(0,0,0,0.01);
+}
+.selecUbicacion{
+    width: 100%;
+    margin-top:0px;
+}
+.btnSelecUbiEm{
+    width: 100%;
+    height: 45px;
+    border-style: solid;
+    background: #fff;
+    border-color: rgb(218, 218, 218);
+    margin-top: 10px;
+    border-width: 1px;
+}
+.btnSelecUbiEm:hover{
+    border-width: 2px;
+}
+.qty-up{
+      position: relative;
+  display: block;
+  width: 27px;
+  height: 20px;
+  border: 1px solid #E4E7ED;
+  background-color: #FFF;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+      pointer-events: none;
+}
+.qty-up:hover{
+    color:#D10024 ;
+}
+
+        /*Horarios*/
+.tituloHorarios{
+    text-align: left;
+    font-size: 20px;
+    font-weight: 600;
+    max-width: 590px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+
+}
+.conttxtbtn{
+    display: flex;
+    flex-wrap: wrap;
+}
+.conttxtbtn{
+    margin-left: 50px;
+}
+
+.csDesde, .csHasta{
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+    
+}
+.txtHoraIn{
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    border-color: rgb(218, 218, 218);
+    border-width: 2px;
+    border-radius: 3px;
+    margin-top: -15px;
+    
+}
+.tituInputs{
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 0px;
+    
+}
+.separadorHoraaa{
+    margin: 2px;
+    font-size: 20px;
+    color:#47484B;
+    font-weight: 200;
+    margin-top: -10px;
+}
+.btnAgregarHorario{
+    margin-top: 40px;
+}
+/*Checkbox*/
+.sdf{
+   display: inline-block;
+   width: 20px;
+   background: #fff;
+}
+.checkbcs{
+    margin-left: 50px;
+}
+.checkbcs input[type="checkbox"]
+{
+    display: none;
+}
+.checkbcs label{
+    color: #D10024;
+
+    padding: 5px 15px 5px 51px;
+    display: inline-block;
+    position: relative;
+    font-weight: 500;
+    font-size: 1em;
+    border-radius: 3px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -o-transition:all 0.3s ease ;
+    transition: all 0.3s ease;
+}
+.checkbcs label:hover{
+    background: rgba(209, 0, 36, .1);
+}
+.checkbcs label:before{
+    content: "";
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    background: none;
+    border: 2px solid #D10024;
+    position: absolute;
+    left: 17px;
+    top: 6px;
+    border-radius: 3px;
+}
+.checkbcs input[type="checkbox"]:checked + label{
+    padding: 5px 15px;
+    background: #D10024;
+    border-radius: 2px;
+    color: #fff;
+}
+.checkbcs input[type="checkbox"]:checked + label:before{
+    display: none;
+}
+/*Checkbox*/
+
+
+
+#inc-button {
+  left: 53px;
+  top: -41px;
+    border-right-style: none;
+    border-top-style: none;
+}
+
+#dec-button {
+  left: 53px;
+  top: -43px;
+    border-bottom-style: none;
+    border-right-style: none;
+}
+.btntxttype{
+    position: absolute;
+  display: block;
+  width: 120px;
+  height: 20px;
+  border: 1px solid #E4E7ED;
+  background-color: #FFF;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+     pointer-events: none;
+}
+.txthora{
+    display: flex;
+}
+.separadorhora{
+    margin-left: 3px;
+    margin-right: 3px;
+    height: 40px;
+    margin-top: 6px;
+    color: rgb(125, 127, 129);
+}
+.txtHora{
+    width: 30px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(218, 218, 218);
+    color: rgb(125, 127, 129);
+    height: 40px;
+    border-radius:0px;
+}
+.contprinhora{
+    display: flex;
+}
+.cntsechora{
+    margin-left: 80px;
+}
+.divlisthora{
+    margin-right: 80px;
+}
+.input-select-hora{
+    width: 350px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(218, 218, 218);
+    color: rgb(125, 127, 129);
+    height: 40px;
+}
+.conttableEm{
+    margin-top: 30px;
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+}
+.tableD {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tableD td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+.tableD th{
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.tableD tr:hover {background-color:#f5f5f5;}
+.divlinea{
+   width: 95%;  
+   margin: 20px;
+}
+
+/*ESTILOS JSP PRESCRIPCIÓN*/
+         
+.divLine{
+             width: 95%; 
+             margin: 20px; 
+             margin-bottom: 10px; 
+         }
+.btndeletetable{
+             margin: 5px;
+             width: 35px; 
+             background-color: #E04F5F; 
+             border: none;
+             border-radius: 10px;
+         }
+ .btnupdatetable
+ {
+     margin: 5px; 
+     width: 35px; 
+     background-color: #5AC0DB; 
+     border: none; 
+     border-radius: 10px;
+ }
+ .btnverreporttable
+ {
+     margin: 5px; 
+     width: 35px; 
+     background-color: #E9ECEF; 
+     border: none; 
+     border-radius: 7px;
+ }
+ .btnverpacientestable
+ {
+     margin: 5px; 
+     width: 35px; 
+     background-color: #E9ECEF; 
+     border: none; 
+     border-radius: 7px;
+ }
+ .btnañadir
+ {
+     border-style: none; 
+     margin-left: 87%; 
+     height: 30px; 
+     width: 100px; 
+     border-radius: 10px; 
+     background: #5BB8D1; 
+     color: #fff; 
+     font-size: 18px; 
+     font-weight: 500;
+ }
+ 
+/* CHECKSBOXS*/
+.container {
+  display: block;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0; 
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2B579A;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+/* BUSCADOR */
+.field{
+    background: #fff;
+    border: 1px solid #CDCDCD;
+    border-radius: 5px;
+    padding: 0 0 0 10px;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 10px;
+    margin-top: 8px;
+    max-width: 80%;
+    height: 50px;
+}
+.txtBuscador, .btnBuscador{
+    position: relative;
+    float: left;
+    width: 650px;
+    height: 48px;
+    padding: 0;
+}
+.txtBuscador{
+    color: #333;
+    border: none;
+    float: left;
+    text-decoration: none;
+    font-size: 16px;
+    color: #757575;
+}
+.btnBuscador{
+   width: 50px;
+    border: none;
+    background: #D10024;
+    float: right;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.fa-search{
+    color: #fff;
+}
+.txtBuscador:focus{
+    outline: none;
+}
+.txtBuscador:focus +.btnBuscador{
+    transform: translate(0.0);
+}
+
+/*INPUT DATE*/
+/* Removes the clear button from date inputs */
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+/* Removes the spin button */
+input[type="date"]::-webkit-inner-spin-button { 
+    display: none;
+}
+
+/* Always display the drop down caret */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #2c3e50;
+}
+
+/* A few custom styles for date inputs */
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    color: #95a5a6;
+    font-family: "Helvetica", arial, sans-serif;
+    font-size: 18px;
+    border:1px solid #ecf0f1;
+    background:#ecf0f1;
+    padding:5px;
+    display: inline-block !important;
+    visibility: visible !important;
+}
+
+input[type="date"], focus {
+    color: #95a5a6;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}

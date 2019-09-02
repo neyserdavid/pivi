@@ -1,0 +1,60 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+    margin: 0;
+    padding: 0;
+}
+/*NAvbarPrimario*/
+.NavBarTop{
+    display: flex;
+    height: 35px;
+    justify-content: space-around;
+    background: #1E1F29;
+    width: 100%;
+}
+.NombUser{
+
+    display: flex;
+    margin-top: -10px;
+}
+.CerrarSesionCont{
+
+    display: flex;
+    margin-top: -10px;
+}
+.iconoUse{
+    width: 25px;
+    height: 25px;
+    margin-top: 15px;
+}
+.iconoCerrarSesion{
+    width: 25px;
+    height: 25px;
+    margin-top: 15px;
+}
+.NavUserN{
+    color: #fff;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+.lblCerrarSesionCont{
+    color: #fff;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.imgnavbar{
+    width: 150px;
+    margin-top: 3px;
+}
+.contSeriesDiarias{
+    width: 90%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: #E8EAED;
+     height: 100px;
+    margin: auto;
+    margin-left: 10px;
+    
+}
