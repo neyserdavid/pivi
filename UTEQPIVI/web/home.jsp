@@ -59,7 +59,7 @@
                               String Rol=(String)session.getAttribute("tipo");
                                if (Rol=="CA"||Rol=="CT") {%>
                             <li><a href="#">Registro de pacientes</a></li>
-                            <li><a href="preescripcion.jsp">Registro de prescripción</a></li>
+                            <li><a href="prescripcion.jsp">Registro de prescripción</a></li>
                             <li><a href="ListarPaciente.jsp">Reportes</a></li>
                             <%}else{%>
                                 <li><a href="#">Puzzle</a></li>
