@@ -91,25 +91,25 @@
             <div class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></div>       
         </header>
 
-              <%         //CONECTANOD A LA BASE DE DATOS:
+        <%         //CONECTANOD A LA BASE DE DATOS:
 
-                Connection connection;
-                String bd = "pivi";
-                String user = "postgres";
-                String password = "AdM1n321";
-                String url = "jdbc:postgresql://localhost:5432/" + bd + "";
-                Class.forName("org.postgresql.Driver");
-                connection = DriverManager.getConnection(url, user, password);
-                //Emnpezamos Listando los Datos de la Tabla Usuario
-                Statement smt;
-                ResultSet rs;
-                smt = connection.createStatement();
-                rs = smt.executeQuery("select ROW_NUMBER() OVER(ORDER BY usuario.cedula) as Cant, preecripcion_terapia.idpreescripcion as id,usuario.cedula as cedula,usuario.nombre as nombre,usuario.apellido as apellido,usuario.sexo as sexo,usuario.fecha_de_nacimiento as fecha from preecripcion_terapia inner join usuario on preecripcion_terapia.idusuario=usuario.idusuario where idterapeuta=1");
-                //Creamo la Tabla:  
-                
-            
-               %>
-                     
+            Connection connection;
+            String bd = "pivi";
+            String user = "postgres";
+            String password = "AdM1n321";
+            String url = "jdbc:postgresql://localhost:5432/" + bd + "";
+            Class.forName("org.postgresql.Driver");
+            connection = DriverManager.getConnection(url, user, password);
+            //Emnpezamos Listando los Datos de la Tabla Usuario
+            Statement smt;
+            ResultSet rs;
+            smt = connection.createStatement();
+            rs = smt.executeQuery("select idusuario,nombre,apellido  from usuario;");
+            //Creamo la Tabla:  
+
+
+        %>
+
         <div style="width: 90%; margin: auto;">
             <div>
                 <p class="ptxttituloinicioPIVI">PREESCRIPCIÓN</p>
@@ -118,31 +118,19 @@
                 <div style="width: 80%; margin: auto;">
                     <div style='margin-bottom: 40px'>
                         <fieldset class="field">
-                            <datalist id="pacientes">
-                                <option value="Azul"></option>
-                                <option value="Amarillo"></option>
-                                <option value="Burdeos"></option>
-                                <option value="Caoba"></option>
-                                <option value="Marrón"></option>
-                                <option value="Naranja"></option>
-                                <option value="Verde"></option>
+                            <datalist id="pacientes" style="width: 90%">
+                                <% 
+                                    while (rs.next()) {
+                                %>
+                                <option id="<%=rs.getString("idusuario")%>" value="<%=rs.getString("nombre")%> <%=rs.getString("apellido")%>"</option>
+                                <%}%>
                             </datalist>
 
                             <input style="width:95%" id="txtbuscador" list="pacientes" name="colores" type="text" class="txtBuscador" placeholder="Buscar Paciente...">
                             <button type="submit" class="btnBuscador" runat ="server" onserverclick="btnbuscar_ServerClick">
                                 <i class="fa fa-search"></i>
                             </button>
-                        </fieldset>
-                        <div style="margin-top: 10px; position: inherit; ">
-                            <label class="container">_  Cédula
-                                <input type="checkbox" checked="checked">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">_  Nombre
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>                        
+                        </fieldset>                      
                     </div> 
                     <div class="card">
                         <div class="divLine">
