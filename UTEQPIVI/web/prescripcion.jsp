@@ -1,4 +1,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -85,8 +91,25 @@
             <div class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></div>       
         </header>
 
-                                
-                                
+              <%         //CONECTANOD A LA BASE DE DATOS:
+
+                Connection connection;
+                String bd = "pivi";
+                String user = "postgres";
+                String password = "AdM1n321";
+                String url = "jdbc:postgresql://localhost:5432/" + bd + "";
+                Class.forName("org.postgresql.Driver");
+                connection = DriverManager.getConnection(url, user, password);
+                //Emnpezamos Listando los Datos de la Tabla Usuario
+                Statement smt;
+                ResultSet rs;
+                smt = connection.createStatement();
+                rs = smt.executeQuery("select ROW_NUMBER() OVER(ORDER BY usuario.cedula) as Cant, preecripcion_terapia.idpreescripcion as id,usuario.cedula as cedula,usuario.nombre as nombre,usuario.apellido as apellido,usuario.sexo as sexo,usuario.fecha_de_nacimiento as fecha from preecripcion_terapia inner join usuario on preecripcion_terapia.idusuario=usuario.idusuario where idterapeuta=1");
+                //Creamo la Tabla:  
+                
+            
+               %>
+                     
         <div style="width: 90%; margin: auto;">
             <div>
                 <p class="ptxttituloinicioPIVI">PREESCRIPCIÓN</p>
