@@ -52,6 +52,10 @@
                 <%
                     session = (HttpSession) request.getSession(false);
                     String Usuario = (String) session.getAttribute("User");
+                    if (Usuario == null) {
+                        //response.sendRedirect("Login.jsp");
+                    } else {
+                    }
                 %>
                 <img src="Imagenes/Checked%20User%20Male_40px.png" alt="" class="iconoUse" style="color: #2B579A;">
                 <p style="color: #fff; margin-top: 18px; margin-left: 10px; font-size: 15px;" ><%=Usuario%></p>
@@ -110,7 +114,7 @@
 
         %>
 
-        <div style="width: 90%; margin: auto;">
+        <div style="width: 90%; margin: auto; margin-top: 100px">
             <div>
                 <p class="ptxttituloinicioPIVI">PREESCRIPCIÓN</p>
             </div>
@@ -119,8 +123,7 @@
                     <div style='margin-bottom: 40px'>
                         <fieldset class="field">
                             <datalist id="pacientes" style="width: 90%">
-                                <% 
-                                    while (rs.next()) {
+                                <%                                    while (rs.next()) {
                                 %>
                                 <option id="<%=rs.getString("idusuario")%>" value="<%=rs.getString("nombre")%> <%=rs.getString("apellido")%>"</option>
                                 <%}%>
@@ -167,67 +170,14 @@
                             </br>
                             <input id="fechafinID" type="date" name="fecha" min="2019-08-23" step="2" required="">
                         </div>
-                        <div class="divLine">
-                            <input type="submit" value="Añadir" class="btnañadir">
+                        <div style="display: flex; justify-content: space-between; max-width: 800px; margin: auto; margin-bottom: 50px;margin-top: 50px;">
+                            <input type="submit" value="Añadir" class="btnCardInicioEmp" style="width: 200px">
                         </div>
                         <%--TABLA--%>
 
-                        <table class="table" style="width: 95%; margin: 20px; margin-bottom: 10px; ">
-                            <thead class="thead-light">
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Descripcion</th>
-                                    <th scope="col">Repeticiones Diarias</th>
-                                    <th scope="col">Dias al mes</th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Legos</td>
-                                    <td>5</td>
-                                    <td>25</td>
-                                    <td>
-                                        <div style="display: flex;">
-                                            <button type="submit" class="btndeletetable"><img src="img/icons8-eliminar-64.png" alt="Imagen" /></button>
-                                            <button type="submit" class="btnupdatetable"><img src="img/icons8-editar-80.png" alt="Imagen" /></button>
-                                        </div>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Rompecabeza</td>
-                                    <td>3</td>
-                                    <td>20</td>
-                                    <td>
-                                        <div style="display: flex;">
-                                            <button type="submit" class="btndeletetable"><img src="img/icons8-eliminar-64.png" alt="Imagen" /></button>
-                                            <button type="submit" class="btnupdatetable"><img src="img/icons8-editar-80.png" alt="Imagen" /></button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Levantar cosas</td>
-                                    <td>4</td>
-                                    <td>15</td>
-                                    <td>
-                                        <div style="display: flex;">
-                                            <button type="submit" class="btndeletetable"><img src="img/icons8-eliminar-64.png" alt="Imagen" /></button>
-                                            <button type="submit" class="btnupdatetable"><img src="img/icons8-editar-80.png" alt="Imagen" /></button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table> 
                     </div>
                 </div>
-                <div style="display: flex; justify-content: space-between; max-width: 800px; margin: auto; margin-bottom: 50px;margin-top: 50px;">
-                    <button class="btnCardInicioEmp" style="width: 310px">Guardar</button>
-                    <button class="btnCardInicioEmp" style="width: 310px; ">Cancelar</button>
-                </div>
+
             </div> 
             <div>
             </div>

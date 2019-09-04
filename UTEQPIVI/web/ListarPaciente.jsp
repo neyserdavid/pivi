@@ -41,6 +41,10 @@
                 <%
                   session = (HttpSession)request.getSession(false);
                   String Usuario= (String)session.getAttribute("User");
+                  if (Usuario== null) {
+                          response.sendRedirect("Login.jsp");
+                      }else{
+                  }
                 %>
                 <img src="Imagenes/Checked%20User%20Male_40px.png" alt="" class="iconoUse" style="color: #2B579A;">
                 <p style="color: #fff; margin-top: 18px; margin-left: 10px; font-size: 15px;" ><%=Usuario%></p>
